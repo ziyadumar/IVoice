@@ -1,8 +1,9 @@
 # IVoice API Documentation
-Documentation for a project
+Documentation for this whole project.
 
 ## Speeches (v1/speech)
 ### 1. /find/{search_word}
+Recieve a `search_word` to search the database
 
 ### 2. /addnew
   To add new Speech
@@ -22,6 +23,7 @@ Documentation for a project
 ```
 ### 3. /update/{id}
   Edit the Speech
+#### Body  
 ```json
 [
   {
@@ -38,6 +40,7 @@ Documentation for a project
 ```
 ### 4. /delete/{id}
   To delete the entire Speech
+#### Body  
 ```json
 [
   {
@@ -46,6 +49,9 @@ Documentation for a project
   }
 ]
 ```
+
+
+##
 
 
   
