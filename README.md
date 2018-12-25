@@ -1,7 +1,7 @@
 # IVoice API Documentation
 Documentation for this whole project.
 
-## Speeches (v1/speech)
+## I Speeches (v1/speech)
 End-Point for Speeches
 
 ### 1. /find/{search_word}
@@ -53,7 +53,7 @@ Recieve a `search_word` to search the database
 ```
 
 
-## Orators (v1/orator)
+## II Orators (v1/orator)
 Next End-Point for Orators
 ### 1. /listall
 
@@ -95,7 +95,7 @@ Next End-Point for Orators
 ]
 ```
 
-## Subject (v1/subject)
+## III Subject (v1/subject)
 End-Point for subjects
 ### 1. /listall (GET)
 ```json
@@ -114,22 +114,42 @@ End-Point for subjects
 
 ### 2. /add (POST)
 
-
 ```json
 [
-  {      "OratorId" : 6547,
-         "OratorName" : "Orator 1",
-         "OratorPublished" : 1,
-         "OratorDeleted" : 0,
-         "OratorDateModified" :  "2018-01-10T08:19:49.473"
-   }      
+  { 
+        "SubjectParent" : "Parent Subject",
+        "SubjectName" : "Subject One",
+        "SubjectPublished" : 1,
+        "SubjectDateAdded" :"2018-01-10T08:19:49.473",
+        "SubjectDateModified" : "2018-01-10T08:19:49.473"
+  }      
 ]
 ```
 
 ### 3. /edit/{id} (PUT)
 
+```json
+[
+  { 
+        "SubjectParent" : "Parent Subject",
+        "SubjectName" : "Subject One",
+        "SubjectPublished" : 1,
+        "SubjectDateModified" : "2018-01-10T08:19:49.473"
+  }      
+]
+```
+
+
 ### 4. delete/{id} (DELETE)
 
-
+```json
+[
+  { 
+        "SubjectId" : 4866
+        "SubjectDeleted" : 0,
+        "SubjectDateModified" : "2018-01-10T08:19:49.473"
+  }      
+]
+```
 
   
