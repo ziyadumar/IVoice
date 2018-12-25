@@ -4,10 +4,10 @@ Documentation for this whole project.
 ## I Speeches (v1/speech)
 End-Point for Speeches
 
-### 1. /find/{search_word}
+### 1. /find/{search_word} (GET)
 Recieve a `search_word` to search the database
 
-### 2. /addnew
+### 2. /addnew (POST)
   To add new Speech
 #### Body
 ```json
@@ -23,7 +23,7 @@ Recieve a `search_word` to search the database
   }
 ]
 ```
-### 3. /update/{id}
+### 3. /update/{id} (PUT)
   Edit the Speech
 #### Body  
 ```json
@@ -40,7 +40,7 @@ Recieve a `search_word` to search the database
   }
 ]
 ```
-### 4. /delete/{id}
+### 4. /delete/{id} (DELETE)
   To delete the entire Speech
 #### Body  
 ```json
@@ -55,8 +55,9 @@ Recieve a `search_word` to search the database
 
 ## II Orators (v1/orator)
 Next End-Point for Orators
-### 1. /listall
-
+### 1. /listall (GET)
+List all the Orators
+#### Body  
 ```json
 [
   {
@@ -69,8 +70,9 @@ Next End-Point for Orators
    }      
 ]
 ```
-### 2. /add
-
+### 2. /add (POST)
+Add new Orator 
+#### Body  
 ```json
 [
   {
@@ -82,8 +84,9 @@ Next End-Point for Orators
    }      
 ]
 ```
-### 3. /edit/{id}
-
+### 3. /edit/{id} (PUT)
+To publish or Unpublish
+#### Body  
 ```json
 [
   {      "OratorId" : 6547,
@@ -95,9 +98,23 @@ Next End-Point for Orators
 ]
 ```
 
+### 4. /delete/{id} (DELETE)
+To delete an orator
+#### Body  
+```json
+[
+  {      
+         "OratorDeleted" : 0
+   }      
+]
+```
+
+
+
 ## III Subject (v1/subject)
 End-Point for subjects
 ### 1. /listall (GET)
+#### Body  
 ```json
 [
   { 
@@ -113,7 +130,8 @@ End-Point for subjects
 ```
 
 ### 2. /add (POST)
-
+Add new subject
+#### Body  
 ```json
 [
   { 
@@ -127,7 +145,8 @@ End-Point for subjects
 ```
 
 ### 3. /edit/{id} (PUT)
-
+Edit a Subject
+#### Body  
 ```json
 [
   { 
@@ -141,11 +160,12 @@ End-Point for subjects
 
 
 ### 4. delete/{id} (DELETE)
-
+Delete a subject
+#### Body  
 ```json
 [
   { 
-        "SubjectId" : 4866
+        "SubjectId" : 4866,
         "SubjectDeleted" : 0,
         "SubjectDateModified" : "2018-01-10T08:19:49.473"
   }      
